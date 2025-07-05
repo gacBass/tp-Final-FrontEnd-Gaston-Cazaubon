@@ -4,10 +4,8 @@ import Landing from '../components/landing/Landing'
 
 const LandingPage = () => {
   return (
-    <Layout>
       <Landing />
-    </Layout>
   )
 }
 
-export default Landing
+export default LandingPage

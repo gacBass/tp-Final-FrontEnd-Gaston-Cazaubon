@@ -24,19 +24,36 @@ main {
 }
 
 .imageSalud {
-  padding-top: 80px;
   border: 1px solid rgb(9, 9, 9);
   max-width: 100%;
   opacity: 0.9;
 }
 
-.whatsappButton {
-  padding: 15px;
-  text-align: center;
-  position: fixed;
-  margin-top: 450px;
-  margin-left: 87%;
-  z-index: 1;
+.whatsapp-button-container {
+    position: fixed; 
+    bottom: 25px;    
+    right: 25px;    
+    z-index: 1000;  
+}
+
+.whatsapp-button-container a {
+    display: block; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    border-radius: 50%;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.whatsapp-button-container a:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.whatsapp-icon {
+    width: 60px;   
+    height: 60px; 
+    border-radius: 50%; 
+    object-fit: cover;
 }
 
 .playfair-display-gaston {

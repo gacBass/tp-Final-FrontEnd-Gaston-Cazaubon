@@ -2,15 +2,18 @@ import React from 'react'
 import Header from './header/header' // <-- use lowercase 'header'
 import Footer from './footer/footer' // <-- use lowercase 'footer'
 import '../index.css'
+import { Outlet } from 'react-router-dom'
 
-function Layout({ children }) {
+function Layout({ }) {
   return (
     <>
       <Header />
       <main>
-        {children}
-        <div class="whatsappButton">
-          <a href="https://wa.me/1163538689" target="_blank"><img src="assets/whatsapp_contacto.svg" alt="imagen de contacto" /></a>
+        <Outlet />
+        <div className="whatsapp-button-container"> 
+          <a href="https://wa.me/5491163538689" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"> 
+            <img src="/assets/whatsapp_contacto.svg" alt="Contactar por WhatsApp" className="whatsapp-icon" /> 
+          </a>
         </div>
       </main>
       <Footer />

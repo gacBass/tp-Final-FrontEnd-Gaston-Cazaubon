@@ -1,0 +1,131 @@
+/* General Body and Font Styling */
+
+
+/* Container for the entire speech section */
+.speech-container {
+    max-width: 900px; /* Max width to keep content readable on large screens */
+    margin: 40px auto; /* Center the container with vertical margin */
+    padding: 20px;
+    background-color: #fff; /* White background for the content box */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Section holding the main content of the speech */
+.speech-content {
+    padding: 20px;
+}
+
+/* Main Heading (H1) */
+.speech-content h1 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for main titles */
+    font-size: 2.2em; /* Larger size for prominence */
+    color: #0056b3; /* A professional blue, slightly darker than Bootstrap's primary */
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+/* Subheadings (H2) */
+.speech-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #007bff; /* Bootstrap primary blue */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e9ecef; /* Subtle line below subheadings */
+    padding-bottom: 5px;
+}
+
+/* Paragraphs */
+.speech-content p {
+    font-size: 1.1em; /* Slightly larger text for readability */
+    margin-bottom: 1em;
+    text-align: justify; /* Justify text for a clean, formal look */
+}
+
+/* List Items (for benefits) */
+.speech-content ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.speech-content li {
+    background-color: #eaf5ff; /* Light blue background for list items */
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border-left: 5px solid #007bff; /* Blue line on the left */
+    border-radius: 4px;
+    font-size: 1.05em;
+    display: flex; /* For better alignment of content */
+    align-items: flex-start;
+}
+
+.speech-content li strong {
+    color: #0056b3; /* Highlight strong text in list items */
+    margin-right: 8px; /* Space between bold title and description */
+    flex-shrink: 0; /* Prevent strong text from shrinking */
+}
+
+
+/* Signature Line */
+.speech-content .signature {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em; /* Larger size for signature */
+    font-weight: bold;
+    color: #0056b3;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef; /* Separator line */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .speech-container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .speech-content h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .speech-content h2 {
+        font-size: 1.5em;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .speech-content p {
+        font-size: 1em;
+    }
+
+    .speech-content li {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    .speech-content .signature {
+        font-size: 1.2em;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .speech-container {
+        margin: 15px auto;
+        padding: 10px;
+    }
+
+    .speech-content h1 {
+        font-size: 1.5em;
+    }
+
+    .speech-content h2 {
+        font-size: 1.3em;
+    }
+}

@@ -1,0 +1,83 @@
+.mainHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(97, 18, 18, 0.08);
+  padding: 0 40px;
+  min-height: 80px;
+}
+
+.header-logo {
+  width: 140px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 40px;
+}
+
+.page-content {
+  padding-top: 120px; /* Adjust based on header height */
+}
+
+.navbar {
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.navbar h3 {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar h3 a {
+  color: #2d3748;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+
+.navbar h3 a:hover,
+.navbar h3 a.activo {
+  background: #e0e7ff;
+  color: #1a7f37;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .mainHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+    min-height: unset;
+  }
+  .header-logo {
+    margin: 0 0 12px 0;
+    width: 110px;
+    height: 40px;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+}

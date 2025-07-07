@@ -11,7 +11,7 @@ const Header = () => {
         <h3><Link to="/quienes-somos"> Quiénes somos </Link></h3>
         <h3><Link to="/galeria">Galería de Casos</Link></h3>
         <h3><Link to="/consultorios">Consultorios</Link></h3>
-        <h3><Link to="/">Equipo Profesional</Link></h3>
+        <h3><Link to="/equipo-profesional">Equipo Profesional</Link></h3>
         <h3><Link to="/">Contacto</Link></h3>
       </nav>
     </header>

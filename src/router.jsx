@@ -1,10 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
 import Consultorios from './components/consultorios/Consultorios'
-import LandingPage from './layout/LandingPage'
+import LandingPage from './pages/LandingPage'
 import Layout from './layout/Layout'
 import Galeria from './components/galeria/Galeria'
 import QuienesSomos from './components/quienesSomos/QuienesSomos'
+import EquipoProfesional from './pages/EquipoProfesionalPage'
 
 export const router = createBrowserRouter([
     {
@@ -26,10 +27,13 @@ export const router = createBrowserRouter([
                 path: '/galeria',
                 element: <Galeria />
             },
-            ,
             {
                 path: '/quienes-somos',
                 element: <QuienesSomos />
+            },
+            {
+                path: '/equipo-profesional',
+                element: <EquipoProfesional />
             }
         ]
     }

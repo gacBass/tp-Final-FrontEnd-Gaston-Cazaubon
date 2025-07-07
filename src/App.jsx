@@ -1,6 +1,5 @@
-import Layout from './layout/Layout'
 import './App.css'
-import Landing from './layout/LandingPage.jsx'
+import Landing from './pages/LandingPage.jsx'
 
 function App() {
   return (

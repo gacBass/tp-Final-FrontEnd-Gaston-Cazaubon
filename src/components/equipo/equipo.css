@@ -24,3 +24,8 @@
     margin-bottom: 20px;
 }
 
+.loading-container img{
+    width: 20vh;
+    height: 20vh;
+    margin-top: 200px;
+}

@@ -5,7 +5,7 @@ const Landing = () => {
         <>
             <main>
 
-                <div class="imageSalud">
+                <div className="imageSalud">
                     <img src="assets/salud.jpg" alt="la salud de nuestros hijes" width="100%" />
                 </div>
 

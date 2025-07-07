@@ -1,11 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
-import Consultorios from './components/consultorios/Consultorios'
+import QuienesSomosPage from './pages/QuienesSomosPage'
+import EquipoProfesionalPage from './pages/EquipoProfesionalPage'
 import LandingPage from './pages/LandingPage'
 import Layout from './layout/Layout'
-import Galeria from './components/galeria/Galeria'
-import QuienesSomos from './components/quienesSomos/QuienesSomos'
-import EquipoProfesional from './pages/EquipoProfesionalPage'
+import GaleriaPage from './pages/GaleriaPage'
+import ConsultoriosPage from './pages/ConsultoriosPage'
+import ContactoPage from './pages/ContactoPage'
 
 export const router = createBrowserRouter([
     {
@@ -21,19 +22,23 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/consultorios',
-                element: <Consultorios />
+                element: <ConsultoriosPage />
             },
             {
                 path: '/galeria',
-                element: <Galeria />
+                element: <GaleriaPage />
             },
             {
                 path: '/quienes-somos',
-                element: <QuienesSomos />
+                element: <QuienesSomosPage />
             },
             {
                 path: '/equipo-profesional',
-                element: <EquipoProfesional />
+                element: <EquipoProfesionalPage />
+            },
+            {
+                path: '/contacto',
+                element: <ContactoPage />
             }
         ]
     }

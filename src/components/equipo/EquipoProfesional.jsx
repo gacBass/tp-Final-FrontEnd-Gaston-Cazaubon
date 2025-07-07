@@ -9,8 +9,8 @@ const EquipoProfesional = () => {
     const { doctors, loading, error } = useEquipoApi();
 
     if (loading) {
-        return <div>
-            <img src="/assets/loader.gif" alt="Loading..."/>
+        return <div className='loading-container'>
+            <img src="/assets/loader.gif" alt="Loading..." />
 
         </div>
     }

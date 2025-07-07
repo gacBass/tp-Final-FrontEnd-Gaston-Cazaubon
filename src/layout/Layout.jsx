@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './header/header' // <-- use lowercase 'header'
-import Footer from './footer/footer' // <-- use lowercase 'footer'
+import Header from './header/Header' 
+import Footer from './footer/Footer' 
 import '../index.css'
 import { Outlet } from 'react-router-dom'
 

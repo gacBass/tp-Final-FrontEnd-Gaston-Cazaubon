@@ -26,7 +26,7 @@ const QuienesSomos = () => {
 
             <p>Lo invitamos a explorar las posibilidades de una transformación que honra su individualidad. Permita que la experiencia y la innovación se pongan al servicio de su mejor versión.</p>
 
-            <p class="signature"><strong>Dr. John Long: Cirugía con Precisión, Resultados con Armonía Natural.</strong></p>
+            <p className="signature"><strong>Dr. John Long: Cirugía con Precisión, Resultados con Armonía Natural.</strong></p>
         </section>
     </div>
 

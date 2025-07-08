@@ -1,12 +1,15 @@
 
 import useEquipoApi from '../../hooks/useEquipoApi'
-import React from 'react'
+import React, { useState } from 'react'
 import './equipo.css'
+
 
 const EquipoProfesional = () => {
 
 
     const { doctors, loading, error } = useEquipoApi();
+
+
 
     if (loading) {
         return <div className='loading-container'>
@@ -20,8 +23,10 @@ const EquipoProfesional = () => {
     }
 
 
+
     return (
         <>
+
             {doctors.map((doctor) => (
                 <div key={doctor.id}>
                     <div className='equipo-profesional-container'>

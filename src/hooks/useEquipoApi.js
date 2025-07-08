@@ -7,6 +7,7 @@ const useEquipoApi = () => {
 
     const equipoMedicoApiUrl = import.meta.env.VITE_EQUIPO_MEDICO_API_URL;
 
+    
     useEffect(() => {
         const fetchDoctorsData = async () => {
             setLoading(true);
@@ -53,9 +54,11 @@ const useEquipoApi = () => {
 
         fetchDoctorsData();
 
+            
+
     }, [equipoMedicoApiUrl]);
 
     return { doctors, loading, error };
 }
-
+ 
 export default useEquipoApi;

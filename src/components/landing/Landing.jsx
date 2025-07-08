@@ -9,7 +9,7 @@ const Landing = () => {
                     <img src="assets/salud.jpg" alt="la salud de nuestros hijes" width="100%" />
                 </div>
 
-                <div class="information playfair-display-information flip-scale-down-diag-1">
+                <div className="information playfair-display-information flip-scale-down-diag-1">
                     <h1>Dr. John Long</h1>
                     <h1>Cirugía General</h1>
                     <h3>Rinoplastía ultrasónica con resultados naturales</h3>

@@ -27,7 +27,9 @@ const EquipoProfesional = () => {
 
     return (
         <>
-                <button className='search-button'><h3><Link to="/search">Buscar</Link></h3></button>
+            <h1>Esta la lista de nuestros profesionales</h1>
+            <h3><button className='search-button'><Link to="/search">Buscar</Link></button></h3>
+
             {doctors.map((doctor) => (
                 <div key={doctor.id}>
                     <div className='equipo-profesional-container'>

@@ -7,13 +7,8 @@ const Search = () => {
 
 
     const [searchInput, setSearchInput] = useState('');
-
+    const [filterby, setFilterBy] = useState('')
     const { doctors, loading, error, fetchDoctorsData } = useEquipoFilter();
-
-
-
-
-
 
     const handleInputChange = (event) => {
 
@@ -21,22 +16,38 @@ const Search = () => {
 
     }
 
+    const handleFilterBy = (event) => {
+
+        setFilterBy(event.target.value);
+
+    }
     const handleSearchClick = (event) => {
 
-        fetchDoctorsData(searchInput);
-
+        fetchDoctorsData(filterby, searchInput);
 
     }
 
+    const handleResetClick = () => {
+        location.reload();
+
+    }
 
 
     return (
         <>
 
             <div className='search'><h2>Realizar Busqueda: </h2>
-                <input type="text" placeholder='Ingrese el pais: ' value={searchInput} onChange={handleInputChange} />
+                <select name="" id="" onChange={handleFilterBy}>
+                    <option value="ciudad">Ciudad</option>
+                    <option value="pais">Pais</option>
+                    <option value="name" enabled>Nombre</option>
+                </select>
+                <input type="text" placeholder='Ingrese valor de busqueda: ' value={searchInput} onChange={handleInputChange} />
                 <button className='search-button' onClick={handleSearchClick}>Buscar</button>
+                <button className='search-button-reset' onClick={handleResetClick}>Reset</button>
                 <button className='search-button'><Link to="/equipo-profesional">Volver</Link></button>
+
+
 
             </div>
 
@@ -63,7 +74,7 @@ const Search = () => {
 
 
             {error && (
-                <div className='search-error'> <h2>Error: {error}</h2></div>
+                <div className='search-error'> <h2>{error}</h2></div>
             )}
 
         </>

@@ -12,13 +12,13 @@ const useEquipoFilter = () => {
     let url = ''
 
 
-        const fetchDoctorsData = useCallback(async (filterValue) => {
+        const fetchDoctorsData = useCallback(async (filterby, filterValue) => {
             setLoading(true);
             setError(null);
             setDoctors([]);
 
             
-            const url = equipoMedicoApiUrl + '?pais=' + filterValue;
+            const url = equipoMedicoApiUrl + '?' + filterby + '=' + filterValue;
 
                
 

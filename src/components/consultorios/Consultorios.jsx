@@ -1,5 +1,5 @@
 import React from 'react'
-import './consultorios.css'
+import '../../styles/consultorios.css'
 
 const Consultorios = () => {
   return (

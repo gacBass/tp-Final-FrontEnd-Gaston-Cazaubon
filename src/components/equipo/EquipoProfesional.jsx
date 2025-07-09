@@ -1,7 +1,7 @@
 
 import useEquipoApi from '../../hooks/useEquipoApi'
 import React, { useState } from 'react'
-import './equipo.css'
+import '../../styles/equipo.css'
 import { Link } from 'react-router-dom';
 
 

@@ -22,10 +22,15 @@
   margin-bottom: 20px;
 }
 
+.loading-container {
+    display: flex; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
 .loading-container img {
   width: 20vh;
   height: 20vh;
-  margin-top: 200px;
 }
 
 .search {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import useEquipoFilter from '../../hooks/useEquipoFilter';
-import './equipo.css';
+import '../../styles/equipo.css';
 import { Link } from 'react-router-dom';
 
 const Search = () => {
@@ -42,7 +42,7 @@ const Search = () => {
                     <option value="pais">Pais</option>
                     <option value="name" enabled>Nombre</option>
                 </select>
-                <input type="text" placeholder='Ingrese valor de busqueda: ' value={searchInput} onChange={handleInputChange} />
+                <input type="text" placeholder='Ingrese texto total o una parte de el ' value={searchInput} onChange={handleInputChange} />
                 <button className='search-button' onClick={handleSearchClick}>Buscar</button>
                 <button className='search-button-reset' onClick={handleResetClick}>Reset</button>
                 <button className='search-button'><Link to="/equipo-profesional">Volver</Link></button>

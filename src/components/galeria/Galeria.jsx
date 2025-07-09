@@ -1,5 +1,5 @@
 import React from 'react';
-import './galeria.css'; 
+import '../../styles/galeria.css'; 
 const Galeria = () => {
     return (
         <>

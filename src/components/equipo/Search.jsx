@@ -7,7 +7,7 @@ const Search = () => {
 
 
     const [searchInput, setSearchInput] = useState('');
-    const [filterby, setFilterBy] = useState('')
+    const [filterby, setFilterBy] = useState('ciudad')
     const { doctors, loading, error, fetchDoctorsData } = useEquipoFilter();
 
     const handleInputChange = (event) => {

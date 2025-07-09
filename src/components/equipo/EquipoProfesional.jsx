@@ -2,6 +2,7 @@
 import useEquipoApi from '../../hooks/useEquipoApi'
 import React, { useState } from 'react'
 import './equipo.css'
+import { Link } from 'react-router-dom';
 
 
 const EquipoProfesional = () => {
@@ -26,7 +27,7 @@ const EquipoProfesional = () => {
 
     return (
         <>
-
+                <button className='search-button'><h3><Link to="/search">Buscar</Link></h3></button>
             {doctors.map((doctor) => (
                 <div key={doctor.id}>
                     <div className='equipo-profesional-container'>

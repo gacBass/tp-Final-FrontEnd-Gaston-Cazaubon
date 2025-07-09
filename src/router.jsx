@@ -7,6 +7,7 @@ import Layout from './layout/Layout'
 import GaleriaPage from './pages/GaleriaPage'
 import ConsultoriosPage from './pages/ConsultoriosPage'
 import ContactoPage from './pages/ContactoPage'
+import SearchPage from './pages/SearchPage'
 
 export const router = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
             {
                 path: '/contacto',
                 element: <ContactoPage />
+            },
+            {
+                path: '/search',
+                element: <SearchPage />
             }
         ]
     }

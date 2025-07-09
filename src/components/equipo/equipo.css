@@ -7,6 +7,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
+  margin-bottom: 40px;
 }
 
 .equipo-profesional-container span {
@@ -25,4 +26,48 @@
   width: 20vh;
   height: 20vh;
   margin-top: 200px;
+}
+
+.search {
+
+  margin-top: 30px;
+}
+
+.search h2 {
+  color: white;
+}
+
+.search-error{
+    color: white;
+
+
+}
+
+/* Button Base Styles */
+.search-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #007bff; /* A nice blue border */
+    border-radius: 5px;
+    background-color: #f0f8ff; /* A very light blue */
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    outline: none; /* Remove outline on focus */
+}
+
+/* Hover Effect */
+.search-button:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #ffffff; /* White text on hover */
+    border-color: #0056b3; /* Darker blue border on hover */
+}
+
+/* Disabled State */
+.search-button:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    border-color: #c0c0c0;
+    cursor: not-allowed;
 }

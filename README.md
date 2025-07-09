@@ -2,3 +2,4 @@
 -  Se paso la pagina a REACT.
 -  Se agrego una llamada a una API en la seccion de equipo medico con su respectiva busqueda.
 -  La pagina se puede visualizar en https://tp-final-front-end-gaston-cazaubon.vercel.app/ 
+-  Primer entrega como referencia https://gacbass.github.io/tp-final-Gaston-Cazaubon/contacto.html 

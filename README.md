@@ -1,4 +1,5 @@
 -  El trabajo practico final se baso en el proyecto realizado a mitad de año.
 -  Se paso la pagina a REACT.
 -  Se agrego una llamada a una API en la seccion de equipo medico con su respectiva busqueda.
+-  Se agrego componente de busqueda dentro de la seccion equipo medico
 -  Primer entrega como referencia https://gacbass.github.io/tp-final-Gaston-Cazaubon/contacto.html 

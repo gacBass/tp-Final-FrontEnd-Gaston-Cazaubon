@@ -24,7 +24,7 @@ Este es el proyecto final de la asignatura, una evolución del trabajo práctico
 ## ⚠️ Limitaciones Conocidas
 
   * Actualmente, la aplicación **no es responsive**, lo que significa que su visualización puede no adaptarse correctamente a diferentes tamaños de pantalla.
-
+  * El formulario de contacto no tiene funcionalidad, solo una alerta asociada como en el primer TP.
 -----
 
 ## 📄 Referencia del Proyecto Anterior

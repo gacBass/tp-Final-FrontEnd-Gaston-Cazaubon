@@ -61,10 +61,3 @@ Para poder ejecutar este proyecto localmente, sigue estos pasos:
     ```
     Esto debería abrir la aplicación en tu navegador en `http://localhost:3000` (o un puerto similar).
 
------
-
-## 👨‍💻 Autor
-
-  * **[Tu Nombre/Alias]** - [Tu Perfil de GitHub (Opcional)]
-
------

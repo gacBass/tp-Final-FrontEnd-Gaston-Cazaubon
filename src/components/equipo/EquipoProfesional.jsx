@@ -26,26 +26,44 @@ const EquipoProfesional = () => {
 
 
     return (
-        <>
-            <h1>Esta la lista de nuestros profesionales</h1>
-            <h3><button className='search-button'><Link to="/search">Buscar</Link></button></h3>
-
-            {doctors.map((doctor) => (
-                <div key={doctor.id}>
-                    <div className='equipo-profesional-container'>
-                        <img src={doctor.avatar} alt={`Avatar de ${doctor.name}`} className='img-fluid rounded-start' style={{ width: '200px', height: '200px' }} />
-                        <h3> Departamento: <span> {doctor.department}</span> </h3>
-                        <h3> Nombre:<span> {doctor.name} </span></h3>
-                        <h3> Ciudad:<span> {doctor.ciudad}</span> </h3>
-                        <h3> Pais:<span> {doctor.pais}</span> </h3>
-
-                    </div>
+        <div className="public-doctor-list">
+            
+            <header className="public-header">
+                <h1>Esta es la lista de nuestros profesionales</h1>
+                <div className="action-toolbar">
+                    <Link to="/search" className='search-button'>
+                        🔎 Buscar
+                    </Link>
                 </div>
-            ))}
+            </header>
 
-        </>
+            <div className="doctors-grid">
+                
+                {(doctors && doctors.length === 0) && !loading && <p>No se encontraron profesionales.</p>}
 
-
-    )
+                {(doctors || []).map((doctor) => (
+                    <div key={doctor._id || doctor.id} className='doctor-card-wrapper'>
+                        
+                        <div className='equipo-profesional-container'>
+                            <img 
+                                src={doctor.avatar} 
+                                alt={`Avatar de ${doctor.name}`} 
+                            />
+                            
+                            <h2>{doctor.name} {doctor.lastName}</h2> 
+                            
+                            <p>
+                                <strong>Departamento:</strong> <span>{doctor.department}</span>
+                            </p>
+                            <p>
+                                <strong>Lugar:</strong> <span>{doctor.city}, {doctor.country}</span>
+                            </p>
+                            
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 }
 export default EquipoProfesional

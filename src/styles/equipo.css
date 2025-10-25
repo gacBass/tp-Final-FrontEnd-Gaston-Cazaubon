@@ -1,83 +1,239 @@
+/* ====================================
+   1. Global Variables (Root)
+   ==================================== */
+:root {
+    --color-primary: #007bff; /* Bright Blue for main actions */
+    --color-success: #1a7f37; /* Green for Edit/Success */
+    --color-danger: #dc3545; /* Red for Remove/Destructive */
+    --color-light: #f9f9f9;  /* Light background */
+    --color-text-dark: #333; /* Main text color */
+    --border-radius-base: 8px;
+    --transition-speed: 0.3s;
+}
+
+/* ====================================
+   2. Doctor Card (equipo-profesional-container)
+   ==================================== */
 .equipo-profesional-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  margin-bottom: 40px;
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text inside the card */
+    height: 100%;
+    
+    /* Spacing and Dimensions */
+    margin: 20px auto 40px auto; /* Centered card, good vertical spacing */
+    max-width: 350px; /* Limits the card width on large screens */
+    padding: 30px 20px; /* Increased top/bottom padding */
+
+    /* Appearance */
+    border: 1px solid #eee; /* Lighter, subtle border */
+    border-radius: var(--border-radius-base);
+    background-color: white; /* Clean white background */
+    
+    /* Modern shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+
+.equipo-profesional-container h3 {
+    margin: 5px 0; /* Tighten spacing between info lines */
+    font-size: 1.1rem;
 }
 
 .equipo-profesional-container span {
-  font-weight: bold;
-  color: #333;
+    font-weight: 700; /* Bold for data labels */
+    color: var(--color-text-dark);
 }
 
 .equipo-profesional-container img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin-bottom: 20px;
+    width: 150px; /* Slightly smaller avatar */
+    height: 150px;
+    object-fit: cover; /* Ensures image fills container without stretching */
+    border-radius: 50%;
+    margin-bottom: 25px;
+    /* Optional: Small shadow for avatar lift */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border: 3px solid var(--color-light); /* Adds a subtle ring */
 }
 
+/* ====================================
+   3. Loading & Search Styles (Assuming Dark Background)
+   ==================================== */
 .loading-container {
     display: flex; 
     align-items: center; 
     flex-direction: column; 
+    margin-top: 50px; 
 }
 
 .loading-container img {
-  width: 20vh;
-  height: 20vh;
+    width: 15vh; /* Reduced size for less dominance */
+    height: 15vh;
+    animation: spin 2s linear infinite; /* Optional: Add a spinning animation */
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
 
 .search {
-
-  margin-top: 30px;
+    margin-top: 30px;
+    text-align: center; /* Center search elements */
 }
 
 .search h2 {
-  color: white;
+    color: white; /* Assuming white text on a dark page background */
 }
 
-.search-error{
-    color: white;
-
-
+.search-error {
+    color: var(--color-danger); /* Use red for errors */
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: var(--border-radius-base);
 }
 
-/* Button Base Styles */
-.search-button {
-    padding: 10px 20px;
+/* ====================================
+   4. Button Group (Base Styles)
+   ==================================== */
+
+/* Consolidated styles for all buttons to ensure consistency */
+.search-button,
+.search-button-reset,
+.edit.outline,
+.remove.outline {
     font-size: 1rem;
     font-weight: 600;
-    border: 2px solid #007bff; 
     border-radius: 5px;
-    background-color: #f0f8ff;
-    color: #007bff;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: all var(--transition-speed) ease;
     outline: none; 
+    padding: 10px 20px;
+    text-decoration: none; /* Good for <Link> or <a> tags styled as buttons */
+    display: inline-block; /* Essential for padding/width consistency */
+    margin: 5px; /* Add small margin for button separation */
 }
 
-/* Hover Effect */
+/* Primary/Search Button */
+.search-button {
+    border: 2px solid var(--color-primary); 
+    background-color: var(--color-light);
+    color: var(--color-primary); 
+}
+
 .search-button:hover {
-    background-color: #007bff; /* Blue background on hover */
-    color: #ffffff; /* White text on hover */
-    border-color: #0056b3; /* Darker blue border on hover */
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary); 
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Subtle blue glow */
 }
 
+/* Reset Button (Toned Down/Secondary) */
 .search-button-reset {
-     padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 2px solid #cccccc;
-    border-radius: 5px;
-    background-color: #f5f5f5; 
-    color: #555555; 
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    outline: none;
+    border: 2px solid #aaa;
+    background-color: #eee; 
+    color: var(--color-text-dark); 
 }
+
+.search-button-reset:hover {
+    background-color: #dddddd; 
+    border-color: #888;
+}
+
+/* ====================================
+   5. Outline Action Buttons (Edit/Remove)
+   ==================================== */
+
+/* Base style for outline buttons */
+.edit.outline,
+.remove.outline {
+    /* Enforces width consistency for a grid/list view */
+    width: 100px; 
+    padding: 8px 0;
+    text-align: center;
+    border-width: 2px; /* Reduced from 3px for a cleaner look */
+}
+
+/* Edit Button */
+.edit.outline {
+    color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.edit.outline:hover {
+    background-color: var(--color-success);
+    color: white;
+}
+
+/* Remove Button */
+.remove.outline {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.remove.outline:hover {
+    background-color: var(--color-danger);
+    color: white;
+}
+
+/* Accessibility Focus State */
+.edit.outline:focus,
+.remove.outline:focus,
+.search-button:focus,
+.search-button-reset:focus {
+    outline: 3px solid rgba(0, 123, 255, 0.5); /* Clear focus ring */
+    outline-offset: 1px;
+}
+
+
+/* ====================================
+   NEW: Grid Layout for Doctor Cards
+   ==================================== */
+.doctors-grid {
+    /* Use CSS Grid for the layout */
+    display: grid;
+    
+    /* Set up responsive columns: 
+       - Default to 1 column on small screens (mobile)
+       - Min of 250px per card, up to 3 columns on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
+    gap: 30px; /* Spacing between the cards */
+    padding: 20px;
+    max-width: 1200px; /* Prevents grid from being too wide on giant screens */
+    margin: 0 auto;
+}
+
+/* Ensure the card container adapts to the grid cell */
+.doctor-card-wrapper {
+    /* Optional: Small hover lift effect on the entire card */
+    transition: transform 0.2s ease-in-out;
+}
+.doctor-card-wrapper:hover {
+    transform: translateY(-5px); 
+}
+
+/* ====================================
+   NEW: Header/Toolbar Layout
+   ==================================== */
+.admin-header {
+    display: flex;
+    justify-content: space-between; /* Pushes title and buttons apart */
+    align-items: center;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* White background for the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle separation line */
+}
+
+.admin-header h1 {
+    font-size: 1.5rem; /* Slightly smaller for the header */
+    color: var(--color-text-dark);
+}
+
+.action-toolbar {
+    display: flex;
+    gap: 15px; /* Spacing between the buttons */
+}
+

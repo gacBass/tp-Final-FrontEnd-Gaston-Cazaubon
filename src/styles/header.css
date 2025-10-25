@@ -64,6 +64,47 @@
   font-weight: bold;
 }
 
+/* ==========================================================
+   ADMIN BUTTON STYLES
+   ========================================================== */
+
+/* 1. Base style for the <h3> container (Sets the red background) */
+.admin-link-button {
+  background-color: #dc3545; /* Base Red */
+  border-radius: 6px; 
+  margin-left: 15px; 
+  padding: 0; 
+  
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+/* 2. Base style for the <a> tag (Sets the white text) */
+.admin-link-button a {
+  /* Overrides the general link color */
+  color: white; 
+  font-weight: bold; 
+  
+  /* Applies padding to the clickable link area */
+  padding: 8px 18px; 
+  border-radius: 6px; 
+}
+
+/* 3. Hover style for the <h3> container (Sets the darker red hover background) */
+.admin-link-button:hover {
+    background-color: #c82333; /* Darker Red on hover */
+    cursor: pointer;
+}
+
+/* 4. ***CRUCIAL OVERRIDE FIX:*** Reset the anchor tag on hover. */
+/* We target the <a> tag with the parent class (.navbar) to beat the specificity of the general rule. */
+.navbar .admin-link-button a:hover {
+    /* This rule is now more specific than .navbar h3 a:hover */
+    background: transparent; /* Prevents the light blue background from appearing */
+    color: white;           /* Prevents the text from turning green */
+}
+
 @media (max-width: 900px) {
   .mainHeader {
     flex-direction: column;
@@ -82,4 +123,11 @@
     gap: 10px;
     width: 100%;
   }
+ 
+}
+
+/* In your header.css */
+.admin-link-button.admin-active a {
+    color: #aaa; /* Lighter color */
+    cursor: default; /* Change cursor */
 }
